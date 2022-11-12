@@ -31,8 +31,10 @@ return require("packer").startup(function(use)
 
     -- Git
     use "lewis6991/gitsigns.nvim"
+
+    use "christoomey/vim-tmux-navigator"
     
-    -- Telescope fuzzy finding
+    -- Telescope
     use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
     use { 
         "nvim-telescope/telescope.nvim", 

@@ -1,7 +1,5 @@
 local nnoremap = require("zakpaw.keymap").nnoremap
 
-nnoremap("<leader><tab>", "<cmd>tabnew<cr><cmd>term<cr>") -- terminal
-
 nnoremap("<leader>q", "<cmd>close<cr>")
 nnoremap("<leader>o", "o<Esc>") -- nl without input
 
