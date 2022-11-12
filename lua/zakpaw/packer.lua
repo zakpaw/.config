@@ -29,10 +29,17 @@ return require("packer").startup(function(use)
     -- Highlighting
     use "nvim-treesitter/nvim-treesitter"   
 
-    -- Auto closing
-    use "windwp/nvim-autopairs"
-    use "windwp/nvim-ts-autotag"
+    -- Git
+    use "lewis6991/gitsigns.nvim"
     
+    -- Telescope fuzzy finding
+    use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
+    use { 
+        "nvim-telescope/telescope.nvim", 
+        branch = "0.1.x",
+        requires = { { "nvim-lua/plenary.nvim" } }
+    }
+
     -- Theme
     use { "catppuccin/nvim", as = "catppuccin" }
 
