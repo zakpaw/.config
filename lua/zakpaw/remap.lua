@@ -10,4 +10,5 @@ nnoremap("<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cu
 nnoremap("<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 nnoremap("<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
+-- netrw
 nnoremap("<nop>", "<buffer><Plug>NetrwRefresh") -- stop netrw from refreshing at c-l
