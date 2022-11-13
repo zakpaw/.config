@@ -1,3 +1,5 @@
+vim.g.mapleader = " "
+
 vim.opt.nu = true
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -23,8 +25,6 @@ vim.opt.clipboard:append("unnamedplus")
 
 vim.opt.cmdheight = 3
 vim.opt.updatetime = 5
-
-vim.g.mapleader = " "
 
 -- netrw
 vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
