@@ -1,6 +1,6 @@
 local nnoremap = require("zakpaw.keymap").nnoremap
 
-nnoremap("<leader>q", "<cmd>close<cr>")
+nnoremap("<leader>q", "<cmd>Lexplore<cr>")
 nnoremap("<leader>o", "o<Esc>") -- nl without input
 
 -- Telescope
