@@ -19,7 +19,7 @@ vim.opt.smartcase = true
 
 -- appearance
 vim.opt.termguicolors = true
-vim.opt.cmdheight = 3
+vim.opt.cmdheight = 2
 vim.opt.updatetime = 5
 
 -- other
