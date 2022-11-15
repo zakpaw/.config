@@ -13,3 +13,6 @@ nnoremap("<C-g>", "<cmd>Telescope live_grep<cr>") -- find string in current work
 
 -- netrw
 nnoremap("<nop>", "<buffer><Plug>NetrwRefresh") -- stop netrw from refreshing at c-l
+
+-- other
+nnoremap("<F5>", "<cmd>UndotreeToggle<cr>") 

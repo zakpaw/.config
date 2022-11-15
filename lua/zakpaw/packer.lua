@@ -33,8 +33,6 @@ return require("packer").startup(function(use)
     use "tpope/vim-fugitive"
     use "lewis6991/gitsigns.nvim"
 
-    use "christoomey/vim-tmux-navigator"
-    
     -- Telescope
     use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
     use { 
@@ -42,6 +40,10 @@ return require("packer").startup(function(use)
         branch = "0.1.x",
         requires = { { "nvim-lua/plenary.nvim" } }
     }
+
+    -- Other
+    use "christoomey/vim-tmux-navigator"
+    use "mbbill/undotree"
 
     -- Theme
     use { "catppuccin/nvim", as = "catppuccin" }
