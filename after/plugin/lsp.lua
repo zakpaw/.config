@@ -1,10 +1,15 @@
-require('lspconfig').pyright.setup(config())
+local conf = {
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
 
-require('lspconfig').rust_analyzer.setup(config())
+require('lspconfig').pyright.setup(conf)
 
-require("lspconfig").tsserver.setup(config())
+require('lspconfig').rust_analyzer.setup(conf)
 
-require("lspconfig").svelte.setup(config())
+require("lspconfig").tsserver.setup(conf)
+
+require("lspconfig").svelte.setup(conf)
 
 -- Setup nvim-cmp.
 local cmp = require("cmp")
