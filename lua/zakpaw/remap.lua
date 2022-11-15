@@ -4,7 +4,7 @@ nnoremap("<leader>q", "<cmd>close<cr>")
 nnoremap("<leader>e", "<cmd>topleft vs<cr>25<C-w>|<cmd>Ex<cr>")
 nnoremap("<leader>o", "o<Esc>") -- nl without input
 
-nnoremap("<leader>+", "<C-a>") -- increment number
+nnoremap("<leader>=", "<C-a>") -- increment number
 nnoremap("<leader>-", "<C-x>") -- decrement number
 
 -- telescope
