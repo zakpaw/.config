@@ -30,6 +30,7 @@ return require("packer").startup(function(use)
     use "nvim-treesitter/nvim-treesitter"   
 
     -- Git
+    use "tpope/vim-fugitive"
     use "lewis6991/gitsigns.nvim"
 
     use "christoomey/vim-tmux-navigator"
