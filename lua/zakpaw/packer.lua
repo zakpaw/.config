@@ -26,8 +26,10 @@ vim.cmd [[packadd packer.nvim]]
 return require("packer").startup(function(use)
     use "wbthomason/packer.nvim"
     
-    -- Highlighting
-    use "nvim-treesitter/nvim-treesitter"   
+    -- Highlighting & formatting
+    use "nvim-treesitter/nvim-treesitter"
+    use "neovim/nvim-lspconfig"
+    use "hrsh7th/nvim-cmp"
 
     -- Git
     use "tpope/vim-fugitive"

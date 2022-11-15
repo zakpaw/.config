@@ -27,6 +27,7 @@ vim.opt.scrolloff = 8
 -- other
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.backspace = "indent,eol,start"
+vim.opt.noh = true
 
 -- netrw
 vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
