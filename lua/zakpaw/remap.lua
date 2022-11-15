@@ -1,7 +1,7 @@
 local nnoremap = require("zakpaw.keymap").nnoremap
 
 nnoremap("<leader>q", "<cmd>close<cr>")
-nnoremap("<leader>e", "<cmd>topleft vs<cr>")
+nnoremap("<leader>e", "<cmd>topleft vs<cr>|<cmd>Ex<cr>")
 
 -- telescope
 nnoremap("<C-f>", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
