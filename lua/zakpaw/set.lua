@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 
+-- line numbers
 vim.opt.nu = true
 vim.opt.number = true
 vim.opt.relativenumber = true
