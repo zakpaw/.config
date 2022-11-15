@@ -21,6 +21,7 @@ vim.opt.smartcase = true
 vim.opt.termguicolors = true
 vim.opt.cmdheight = 2
 vim.opt.updatetime = 5
+vim.opt.scrolloff = 8
 
 -- other
 vim.opt.clipboard:append("unnamedplus")
