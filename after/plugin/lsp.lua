@@ -1,15 +1,27 @@
-local conf = {
-    on_attach = on_attach,
-    flags = lsp_flags,
+local lsp_config = require("lspconfig")
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+local lang_servers = {
+    "bashls",
+    "cssls",
+    "html",
+    "jsonls",
+    "sumneko_lua",
+    "pyright",
+    "rust_analyzer",
+    "svelte",
+    "tailwindcss",
+    "terraformls",
+    "tsserver",
 }
+for _, lsp in ipairs(lang_servers) do
+    lsp_config[lsp].setup {
+        on_attach = on_attach,
+        flags = lsp_flags,
+    }
+end
 
-require('lspconfig').pyright.setup(conf)
-
-require('lspconfig').rust_analyzer.setup(conf)
-
-require("lspconfig").tsserver.setup(conf)
-
-require("lspconfig").svelte.setup(conf)
+-- Setup mason
+require("mason").setup()
 
 -- Setup nvim-cmp.
 local cmp = require("cmp")

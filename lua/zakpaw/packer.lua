@@ -30,6 +30,7 @@ return require("packer").startup(function(use)
     use "nvim-treesitter/nvim-treesitter"
     use "neovim/nvim-lspconfig"
     use "hrsh7th/nvim-cmp"
+    use "williamboman/mason.nvim"
 
     -- Git
     use "tpope/vim-fugitive"
