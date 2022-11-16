@@ -25,11 +25,12 @@ vim.cmd [[packadd packer.nvim]]
 
 return require("packer").startup(function(use)
     use "wbthomason/packer.nvim"
-    
+
     -- Highlighting & formatting
     use "nvim-treesitter/nvim-treesitter"
     use "neovim/nvim-lspconfig"
     use "hrsh7th/nvim-cmp"
+    use "hrsh7th/cmp-nvim-lsp"
     use "williamboman/mason.nvim"
 
     -- Git
@@ -38,8 +39,8 @@ return require("packer").startup(function(use)
 
     -- Telescope
     use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
-    use { 
-        "nvim-telescope/telescope.nvim", 
+    use {
+        "nvim-telescope/telescope.nvim",
         branch = "0.1.x",
         requires = { { "nvim-lua/plenary.nvim" } }
     }

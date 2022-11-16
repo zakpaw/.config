@@ -1,5 +1,7 @@
+-- setup lspconfig 
 local lsp_config = require("lspconfig")
--- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+-- github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 local lang_servers = {
     "bashls",
     "cssls",
@@ -17,15 +19,12 @@ for _, lsp in ipairs(lang_servers) do
     lsp_config[lsp].setup {
         on_attach = on_attach,
         flags = lsp_flags,
+        capabilities = capabilities,
     }
 end
 
--- Setup mason
-require("mason").setup()
-
--- Setup nvim-cmp.
+-- setup nvim-cmp.
 local cmp = require("cmp")
-
 cmp.setup({
     mapping = cmp.mapping.preset.insert({
         ['<C-y>'] = cmp.mapping.confirm({ select = true }),
@@ -38,3 +37,6 @@ cmp.setup({
         { name = "buffer" },
     },
 })
+
+-- setup mason
+require("mason").setup()
