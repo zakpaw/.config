@@ -53,5 +53,8 @@ vim.diagnostic.config {
     virtual_text = false,
     signs = {
         active = signs
+    },
+    float = {
+        border = "rounded"
     }
 }
