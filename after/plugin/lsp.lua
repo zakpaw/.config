@@ -1,6 +1,10 @@
+-- setup mason
+require("mason").setup()
+
 -- setup lspconfig 
 local lsp_config = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 -- github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 local lang_servers = {
     "bashls",
@@ -17,27 +21,37 @@ local lang_servers = {
     "tsserver",
 }
 for _, lsp in ipairs(lang_servers) do
-    lsp_config[lsp].setup {
-        on_attach = on_attach,
-        flags = lsp_flags,
-        capabilities = capabilities,
-    }
+    if lsp == "sumneko_lua" then
+        lsp_config[lsp].setup {
+            capabilities = capabilities,
+            settings = {
+                Lua = {
+                    diagnostics = {
+                        globals = { "vim" }
+                    }
+                }
+            },
+        }
+    else
+        lsp_config[lsp].setup { capabilities = capabilities }
+    end
 end
 
--- setup nvim-cmp.
-local cmp = require("cmp")
-cmp.setup({
-    mapping = cmp.mapping.preset.insert({
-        ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-        ["<C-u>"] = cmp.mapping.scroll_docs(-4),
-        ["<C-d>"] = cmp.mapping.scroll_docs(4),
-        ["<C-Space>"] = cmp.mapping.complete(),
-    }),
-    sources = {
-        { name = "nvim_lsp" },
-        { name = "buffer" },
-    },
-})
+-- no error messages in text, signs on left instead
+local signs = {
+    { name = "DiagnosticSignError", text = "" },
+    { name = "DiagnosticSignWarn", text = "" },
+    { name = "DiagnosticSignHint", text = "" },
+    { name = "DiagnosticSignInfo", text = "" },
+}
 
--- setup mason
-require("mason").setup()
+for _, sign in ipairs(signs) do
+    vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
+end
+
+vim.diagnostic.config {
+    virtual_text = false,
+    signs = {
+        active = signs
+    }
+}

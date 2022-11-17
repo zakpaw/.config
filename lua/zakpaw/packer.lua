@@ -1,4 +1,4 @@
--- Ensure Packer is installed
+-- ensure Packer is installed
 local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -12,7 +12,7 @@ end
 
 local packer_bootstrap = ensure_packer()
 
--- Automatically reload
+-- automatically reload
 vim.cmd([[
   augroup packer_user_config
     autocmd!
@@ -20,25 +20,34 @@ vim.cmd([[
   augroup end
 ]])
 
--- Install plugins
+-- install plugins
 vim.cmd [[packadd packer.nvim]]
 
 return require("packer").startup(function(use)
     use "wbthomason/packer.nvim"
 
-    -- Highlighting & formatting
+    -- highlighting & formatting
     use "nvim-treesitter/nvim-treesitter"
     use "neovim/nvim-lspconfig"
+    use "williamboman/mason.nvim"
+
+    -- cmp plugins
     use "hrsh7th/nvim-cmp"
     use "hrsh7th/cmp-nvim-lsp"
-    use "williamboman/mason.nvim"
-    use "hashivim/vim-terraform"
+    use "hrsh7th/cmp-buffer"
+    use "hrsh7th/cmp-path"
+    use "hrsh7th/cmp-cmdline"
+    use "saadparwaiz1/cmp_luasnip"
 
-    -- Git
+    -- snippets
+    use "L3MON4D3/LuaSnip"
+    use "rafamadriz/friendly-snippets"
+
+    -- git
     use "tpope/vim-fugitive"
     use "lewis6991/gitsigns.nvim"
 
-    -- Telescope
+    -- telescope
     use { "nvim-telescope/telescope-fzf-native.nvim", run = "make" }
     use {
         "nvim-telescope/telescope.nvim",
@@ -46,11 +55,12 @@ return require("packer").startup(function(use)
         requires = { { "nvim-lua/plenary.nvim" } }
     }
 
-    -- Other
+    -- other
     use "christoomey/vim-tmux-navigator"
     use "mbbill/undotree"
+    use "hashivim/vim-terraform"
 
-    -- Theme
+    -- theme
     use { "catppuccin/nvim", as = "catppuccin" }
 
     if packer_bootstrap then

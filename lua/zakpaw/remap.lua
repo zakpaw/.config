@@ -20,3 +20,4 @@ nnoremap("<nop>", "<buffer><Plug>NetrwRefresh") -- stop netrw from refreshing at
 nnoremap("<F5>", "<cmd>UndotreeToggle<cr>")
 nnoremap("<leader>=", "<C-a>") -- increment number
 nnoremap("<leader>-", "<C-x>") -- decrement number
+nnoremap("<C-e>", "<cmd>lua vim.diagnostic.open_float({'line'})<cr>")
