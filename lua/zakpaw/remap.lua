@@ -20,4 +20,3 @@ nnoremap("<nop>", "<buffer><Plug>NetrwRefresh") -- stop netrw from refreshing at
 nnoremap("<F5>", "<cmd>UndotreeToggle<cr>")
 nnoremap("<leader>=", "<C-a>") -- increment number
 nnoremap("<leader>-", "<C-x>") -- decrement number
-nnoremap("<leader>o", "o<Esc>") -- nl without input
