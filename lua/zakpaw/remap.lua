@@ -4,8 +4,9 @@ nnoremap("<leader>q", "<cmd>close<cr>")
 nnoremap("<leader>e", "<cmd>topleft vs<cr>|<cmd>Ex<cr>")
 
 -- telescope
-nnoremap("<C-f>", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
-nnoremap("<C-g>", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
+nnoremap("<C-f>", "<cmd>Telescope find_files<cr>")
+nnoremap("<C-g>", "<cmd>Telescope live_grep<cr>")
+nnoremap("<C-b>", "<cmd>Telescope git_branches<cr>")
 
 -- lspconfig
 nnoremap("gd", "<cmd>lua vim.lsp.buf.definition()<cr>")
