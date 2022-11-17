@@ -24,6 +24,10 @@ vim.opt.cmdheight = 2
 vim.opt.updatetime = 5
 vim.opt.scrolloff = 8
 
+-- terraform
+vim.g.terraform_fmt_on_save = true
+vim.g.terraform_align = true
+
 -- other
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.backspace = "indent,eol,start"

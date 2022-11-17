@@ -13,6 +13,7 @@ local lang_servers = {
     "svelte",
     "tailwindcss",
     "terraformls",
+    "tflint",
     "tsserver",
 }
 for _, lsp in ipairs(lang_servers) do

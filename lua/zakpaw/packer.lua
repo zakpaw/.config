@@ -32,6 +32,7 @@ return require("packer").startup(function(use)
     use "hrsh7th/nvim-cmp"
     use "hrsh7th/cmp-nvim-lsp"
     use "williamboman/mason.nvim"
+    use "hashivim/vim-terraform"
 
     -- Git
     use "tpope/vim-fugitive"
