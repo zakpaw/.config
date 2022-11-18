@@ -9,9 +9,8 @@ nnoremap("<C-g>", "<cmd>Telescope live_grep<cr>")
 nnoremap("<C-b>", "<cmd>Telescope git_branches<cr>")
 
 -- lspconfig
-nnoremap("gd", "<cmd>lua vim.lsp.buf.definition()<cr>")
-nnoremap("gD", "<cmd>lua vim.lsp.buf.declaration()<cr>")
-nnoremap("gi", "<cmd>lua vim.lsp.buf.implementation()<cr>")
+nnoremap("gd", "<cmd>Telescope lsp_definitions theme=dropdown<cr>")
+nnoremap("gD", "<cmd>Telescope lsp_references theme=dropdown<cr>")
 nnoremap("K", "<cmd>lua vim.lsp.buf.hover()<cr>")
 
 -- netrw
