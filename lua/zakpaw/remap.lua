@@ -6,7 +6,7 @@ nnoremap("<leader>e", "<cmd>topleft vs<cr>|<cmd>Ex<cr>")
 -- telescope
 nnoremap("<C-f>", "<cmd>Telescope find_files<cr>")
 nnoremap("<C-g>", "<cmd>Telescope live_grep<cr>")
-nnoremap("<C-b>", "<cmd>Telescope git_branches<cr>")
+nnoremap("<C-b>", "<cmd>Telescope git_branches theme=dropdown<cr>")
 
 -- lspconfig
 nnoremap("gd", "<cmd>Telescope lsp_definitions theme=dropdown<cr>")
