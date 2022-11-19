@@ -62,6 +62,11 @@ return require("packer").startup(function(use)
 
     -- theme
     use { "catppuccin/nvim", as = "catppuccin" }
+    use "kyazdani42/nvim-web-devicons"
+    use {
+      "nvim-lualine/lualine.nvim",
+      requires = { "kyazdani42/nvim-web-devicons", opt = true }
+    }
 
     if packer_bootstrap then
         require('packer').sync()
