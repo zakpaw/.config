@@ -54,6 +54,7 @@ return require("packer").startup(function(use)
         branch = "0.1.x",
         requires = { { "nvim-lua/plenary.nvim" } }
     }
+    use "AckslD/nvim-neoclip.lua"
 
     -- other
     use "christoomey/vim-tmux-navigator"
