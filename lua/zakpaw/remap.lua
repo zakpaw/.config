@@ -5,7 +5,7 @@ nnoremap("<leader>e", "<cmd>topleft vs<cr>|<cmd>Ex<cr>")
 
 -- telescope
 nnoremap("<C-f>", "<cmd>Telescope find_files<cr>")
-nnoremap("<C-d>", "<cmd>Telescope find_files hidden=true<cr>")
+nnoremap("<C-s>", "<cmd>Telescope find_files hidden=true<cr>")
 nnoremap("<C-g>", "<cmd>Telescope live_grep<cr>")
 nnoremap("<C-b>", "<cmd>Telescope git_branches theme=dropdown<cr>")
 nnoremap("<C-p>", "<cmd>Telescope neoclip plus theme=dropdown initial_mode=normal<cr>")
