@@ -7,7 +7,7 @@ nnoremap("<leader>e", "<cmd>topleft vs<cr>|<cmd>Ex<cr>")
 nnoremap("<C-f>", "<cmd>Telescope find_files<cr>")
 nnoremap("<C-g>", "<cmd>Telescope live_grep<cr>")
 nnoremap("<C-b>", "<cmd>Telescope git_branches theme=dropdown<cr>")
-nnoremap("<C-p>", "<cmd>Telescope neoclip theme=dropdown initial_mode=normal<cr>")
+nnoremap("<C-p>", "<cmd>Telescope neoclip plus theme=dropdown initial_mode=normal<cr>")
 
 -- lspconfig
 nnoremap("gd", "<cmd>Telescope lsp_definitions theme=dropdown<cr>")

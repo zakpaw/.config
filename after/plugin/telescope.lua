@@ -1,7 +1,13 @@
 local telescope = require("telescope")
 local actions = require("telescope.actions")
--- setup neoclip
-require("neoclip").setup { keys = { telescope = { i = { paste_behind = '<nop>' } } } }
+
+telescope.load_extension("fzf")
+telescope.load_extension("neoclip")
+
+require("neoclip").setup {
+    enable_persistent_history = true,
+    history = 30,
+}
 
 telescope.setup({
     defaults = {
@@ -22,6 +28,3 @@ telescope.setup({
         }
     }
 })
-
-telescope.load_extension("fzf")
-telescope.load_extension("neoclip")
