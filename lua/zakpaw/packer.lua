@@ -60,6 +60,7 @@ return require("packer").startup(function(use)
     use "christoomey/vim-tmux-navigator"
     use "mbbill/undotree"
     use "hashivim/vim-terraform"
+    use "airblade/vim-rooter"
 
     -- theme
     use { "catppuccin/nvim", as = "catppuccin" }
