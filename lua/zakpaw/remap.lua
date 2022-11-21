@@ -12,6 +12,8 @@ nnoremap("<leader>-", "<C-x>") -- decrement number
 -- basic visual
 vnoremap("<s-J>", "<cmd>m '>+1<cr>") -- move line down
 vnoremap("<s-K>", "<cmd>m '<-2<cr>") -- move line up
+vnoremap("<s-H>", "^")
+vnoremap("<s-L>", "$")
 
 -- telescope
 nnoremap("<C-f>", "<cmd>Telescope find_files<cr>")
