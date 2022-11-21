@@ -1,7 +1,17 @@
 local nnoremap = require("zakpaw.keymap").nnoremap
+local vnoremap = require("zakpaw.keymap").vnoremap
 
+-- basic normal
 nnoremap("<leader>q", "<cmd>close<cr>")
 nnoremap("<leader>e", "<cmd>topleft vs<cr>|<cmd>Ex<cr>")
+nnoremap("<s-H>", "^")
+nnoremap("<s-L>", "$")
+nnoremap("<leader>=", "<C-a>") -- increment number
+nnoremap("<leader>-", "<C-x>") -- decrement number
+
+-- basic visual
+vnoremap("<s-J>", "<cmd>m '>+1<cr>") -- move line down
+vnoremap("<s-K>", "<cmd>m '<-2<cr>") -- move line up
 
 -- telescope
 nnoremap("<C-f>", "<cmd>Telescope find_files<cr>")
@@ -20,6 +30,4 @@ nnoremap("<nop>", "<buffer><Plug>NetrwRefresh") -- stop netrw from refreshing at
 
 -- other
 nnoremap("<F5>", "<cmd>UndotreeToggle<cr>")
-nnoremap("<leader>=", "<C-a>") -- increment number
-nnoremap("<leader>-", "<C-x>") -- decrement number
 nnoremap("<C-e>", "<cmd>lua vim.diagnostic.open_float({'line'})<cr>")
