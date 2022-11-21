@@ -19,6 +19,7 @@ local lang_servers = {
     "terraformls",
     "tflint",
     "tsserver",
+    "dockerls"
 }
 for _, lsp in ipairs(lang_servers) do
     if lsp == "sumneko_lua" then
