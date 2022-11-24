@@ -9,8 +9,8 @@ nnoremap("<s-H>", "^")
 nnoremap("<s-L>", "$")
 nnoremap("<leader>=", "<C-a>") -- increment number
 nnoremap("<leader>-", "<C-x>") -- decrement number
-nnoremap("<Tab>", "<cmd>bnext<cr>") -- next buffer
-nnoremap("<S-Tab>", "<cmd>bprev<cr>") -- previous buffer
+nnoremap("<Tab>", "<silent><cmd>bnext<cr>") -- next bufferrema
+nnoremap("<S-Tab>", "<silent><cmd>bprev<cr>") -- previous buffer
 
 -- basic visual
 vnoremap("<s-J>", "<cmd>m '>+1<cr>") -- move line down
