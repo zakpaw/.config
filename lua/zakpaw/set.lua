@@ -31,6 +31,7 @@ vim.g.terraform_align = true
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.backspace = "indent,eol,start"
 vim.opt.undofile = true
+vim.g.noshowmode = true -- doesn't work
 
 -- netrw
 vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
