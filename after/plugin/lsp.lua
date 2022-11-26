@@ -6,36 +6,30 @@ local lsp_config = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 -- github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+lsp_config["sumneko_lua"].setup {
+    capabilities = capabilities,
+    settings = { Lua = { diagnostics = { globals = { "vim" } } } },
+}
+lsp_config["tailwindcss"].setup {
+    capabilities = capabilities,
+    filetypes = { "css", "postcss", "sass", "scss", "vue", "svelte" }
+}
 local lang_servers = {
+    "marksman",
     "bashls",
     "cssls",
     "html",
     "jsonls",
-    "sumneko_lua",
     "pyright",
     "rust_analyzer",
     "svelte",
-    "tailwindcss",
     "terraformls",
     "tflint",
     "tsserver",
-    "dockerls"
+    "dockerls",
 }
 for _, lsp in ipairs(lang_servers) do
-    if lsp == "sumneko_lua" then
-        lsp_config[lsp].setup {
-            capabilities = capabilities,
-            settings = {
-                Lua = {
-                    diagnostics = {
-                        globals = { "vim" }
-                    }
-                }
-            },
-        }
-    else
-        lsp_config[lsp].setup { capabilities = capabilities }
-    end
+    lsp_config[lsp].setup { capabilities = capabilities }
 end
 
 -- no error messages in text, signs on left instead
