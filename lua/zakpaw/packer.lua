@@ -61,6 +61,7 @@ return require("packer").startup(function(use)
     use "mbbill/undotree"
     use "hashivim/vim-terraform"
     use "airblade/vim-rooter"
+    use "iamcco/markdown-preview.nvim"
 
     -- theme
     use { "catppuccin/nvim", as = "catppuccin" }
