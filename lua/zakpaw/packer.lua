@@ -62,6 +62,7 @@ return require("packer").startup(function(use)
     use "hashivim/vim-terraform"
     use "airblade/vim-rooter"
     use "iamcco/markdown-preview.nvim"
+    use "jpalardy/vim-slime"
 
     -- theme
     use { "catppuccin/nvim", as = "catppuccin" }
