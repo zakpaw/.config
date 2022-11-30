@@ -6,7 +6,7 @@ end
 
 local diff = {
   "diff",
-  symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
+  symbols = { added = " ", modified = " ", removed = " " },
   cond = hide_in_width,
 }
 
@@ -36,25 +36,6 @@ local spacing = {
   end,
 }
 
-local lsp_info = {
-  function()
-    local msg = "none"
-    local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-    local clients = vim.lsp.get_active_clients()
-    if next(clients) == nil then
-      return msg
-    end
-    for _, client in ipairs(clients) do
-      local filetypes = client.config.filetypes
-      if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-        return client.name
-      end
-    end
-    return msg
-  end,
-  icon = " LSP:",
-}
-
 lualine.setup {
   options = {
     icons_enabled = true,
@@ -66,7 +47,7 @@ lualine.setup {
   sections = {
     lualine_a = { "mode" },
     lualine_b = { branch, diff },
-    lualine_c = { "filename", spacing, lsp_info },
+    lualine_c = { "filename", spacing },
     lualine_x = { filetype },
     lualine_y = { "location" },
     lualine_z = { progress },
