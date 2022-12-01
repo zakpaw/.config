@@ -7,6 +7,7 @@ nnoremap("<leader>e", "<cmd>Ex<cr>")
 nnoremap("<leader>w", "<cmd>topleft vs<cr>|<cmd>Ex<cr>")
 nnoremap("<s-H>", "^")
 nnoremap("<s-L>", "$")
+nnoremap("x", '"_x')
 nnoremap("<leader>=", "<C-a>") -- increment number
 nnoremap("<leader>-", "<C-x>") -- decrement number
 nnoremap("<Tab>", "<cmd>bnext<cr>") -- next bufferrema
