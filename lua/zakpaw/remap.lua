@@ -7,6 +7,10 @@ nnoremap("<leader>e", "<cmd>Ex<cr>")
 nnoremap("<leader>w", "<cmd>topleft vs<cr>|<cmd>Ex<cr>")
 nnoremap("<s-H>", "^")
 nnoremap("<s-L>", "$")
+nnoremap("<C-d>", "<C-d>zz")
+nnoremap("<C-u>", "<C-u>zz")
+nnoremap("n", "nzz")
+nnoremap("N", "Nzz")
 nnoremap("x", '"_x')
 nnoremap("<leader>=", "<C-a>") -- increment number
 nnoremap("<leader>-", "<C-x>") -- decrement number
