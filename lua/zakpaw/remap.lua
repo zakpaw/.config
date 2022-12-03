@@ -2,7 +2,7 @@ local nnoremap = require("zakpaw.keymap").nnoremap
 local vnoremap = require("zakpaw.keymap").vnoremap
 
 -- basic normal
-nnoremap("<leader>q", "<cmd>close<cr>")
+nnoremap("<leader>q", "<cmd>bd<cr>")
 nnoremap("<leader>e", "<cmd>Ex<cr>")
 nnoremap("<leader>w", "<cmd>topleft vs<cr>|<cmd>Ex<cr>")
 nnoremap("<s-H>", "^")
