@@ -17,10 +17,12 @@ vim.opt.smartindent = true
 -- search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
 
 -- appearance
 vim.opt.termguicolors = true
-vim.opt.updatetime = 5
+vim.opt.updatetime = 50
 vim.opt.scrolloff = 8
 
 -- terraform
@@ -31,6 +33,7 @@ vim.g.terraform_align = true
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.backspace = "indent,eol,start"
 vim.opt.undofile = true
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.g.noshowmode = true -- doesn't work
 
 -- netrw
