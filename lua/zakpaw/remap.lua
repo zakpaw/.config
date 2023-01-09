@@ -15,6 +15,7 @@ vim.keymap.set("n", "<Tab>", ":bnext<cr>") -- next bufferrema
 vim.keymap.set("n", "<S-Tab>", ":bprev<cr>") -- previous buffer
 
 -- basic visual
+vim.keymap.set("v", "p", "P") -- dont replace register after v p
 vim.keymap.set("v", "<s-J>", ":m '>+1<CR>gv=gv") -- move line down
 vim.keymap.set("v", "<s-K>", ":m '<-2<CR>gv=gv") -- move line up
 vim.keymap.set("v", "<s-H>", "^")
